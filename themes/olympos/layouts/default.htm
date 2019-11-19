@@ -1,0 +1,53 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <link href="{{ 'assets/css/owl.carousel.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/owl.theme.default.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/plyr.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/easyzoom.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/customs.css'|theme }}" rel="stylesheet">
+    {% styles %}
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- Header -->
+        {% partial 'site/header' %}
+        {% partial 'site/address' %}
+
+        <!-- Content -->
+        {% page %}
+        <!-- Footer -->
+        <div id="cart-fixed-right">
+            {% partial 'site/footer' %}
+            {% partial 'site/cart-fixed' %}
+        </div>
+
+
+        {% partial 'auth/pop_login' %}
+        {% partial 'auth/pop_register' %}
+        {% partial 'auth/pop_forgot_password' %}
+
+    </div>
+    <script src="{{ 'assets/vendor/jquery-3.4.1.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/owl.carousel.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/lightbox.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/plyr.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/easyzoom.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/main.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+</body>
+</html>
